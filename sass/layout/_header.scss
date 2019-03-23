@@ -15,10 +15,17 @@
         position: absolute;
         top: 4rem;
         left: 4rem;
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        background-color: $color-white;
+        text-align: center;
     }
 
     &__logo {
-        height: 3.5rem;
+        position: relative;
+        height: 8rem;
+        top: 1rem;
     }
     
     &__text-box {

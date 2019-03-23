@@ -237,9 +237,16 @@ body {
   .header__logo-box {
     position: absolute;
     top: 4rem;
-    left: 4rem; }
+    left: 4rem;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    background-color: #fff;
+    text-align: center; }
   .header__logo {
-    height: 3.5rem; }
+    position: relative;
+    height: 8rem;
+    top: 1rem; }
   .header__text-box {
     position: absolute;
     text-align: center;
