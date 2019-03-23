@@ -242,11 +242,17 @@ body {
     width: 10rem;
     height: 10rem;
     background-color: #fff;
-    text-align: center; }
+    text-align: center;
+    animation: moveInLeft 1s ease-out;
+    animation-delay: 1.2s;
+    animation-fill-mode: backwards; }
   .header__logo {
     position: relative;
     height: 8rem;
-    top: 1rem; }
+    top: 1rem;
+    transition: all .2s; }
+    .header__logo:hover {
+      transform: scale(1.1); }
   .header__text-box {
     position: absolute;
     text-align: center;

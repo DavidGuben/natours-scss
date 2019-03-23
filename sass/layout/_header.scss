@@ -20,12 +20,20 @@
         height: 10rem;
         background-color: $color-white;
         text-align: center;
+        animation: moveInLeft 1s ease-out;
+        animation-delay: 1.2s;
+        animation-fill-mode: backwards;
     }
 
     &__logo {
         position: relative;
         height: 8rem;
         top: 1rem;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     
     &__text-box {
