@@ -414,3 +414,8 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 50rem 0;
   margin-top: -10rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  /* TB / LR */
+  background-color: #f7f7f7; }
