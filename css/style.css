@@ -411,6 +411,36 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media (max-width: 900px) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card__side {
+        height: auto;
+        position: relative;
+        border-radius: 3px;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__details {
+        padding: 1rem 3rem; }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        text-align: center;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card__price-box {
+        margin-bottom: 3rem; }
+      .card__price-value {
+        font-size: 4rem; } }
 
 .story {
   width: 75%;
@@ -422,8 +452,14 @@ body {
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
-  .story > * {
-    transform: skew(12deg); }
+  @media (max-width: 900px) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 600px) {
+    .story {
+      transform: skewX(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -435,8 +471,11 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
     /* turns the element into the defined shape */
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skew(12deg);
+    transform: translateX(-3rem) skewX(12deg);
     position: relative; }
+    @media (max-width: 600px) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0); } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
@@ -444,7 +483,10 @@ body {
     /* fixes small animation glitches */
     transition: all .5s; }
   .story__text {
-    transform: skew(12deg); }
+    transform: skewX(12deg); }
+    @media (max-width: 600px) {
+      .story__text {
+        transform: skewX(0); } }
   .story__caption {
     position: absolute;
     /* this depends on the parent element being position: relative */
@@ -482,6 +524,12 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
+  @media (max-width: 1200px) {
+    .form__input {
+      width: 60%; } }
+  @media (max-width: 900px) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -508,6 +556,10 @@ body {
 .form__radio-group {
   width: 48%;
   display: inline-block; }
+  @media (max-width: 900px) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
 
 .form__radio-input {
   display: none; }
@@ -574,9 +626,17 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .5s .2s; }
+    @media (max-width: 900px) {
+      .popup__content {
+        display: inline-block;
+        overflow: scroll; } }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
+    @media (max-width: 900px) {
+      .popup__left {
+        display: inline-block;
+        width: 100%; } }
   .popup__right {
     width: 66.666667%;
     display: table-cell;
@@ -584,7 +644,13 @@ body {
     padding: 3rem 5rem; }
   .popup__img {
     display: block;
+    float: left;
     width: 100%; }
+    @media (max-width: 900px) {
+      .popup__img {
+        width: 50%;
+        background-position: top;
+        padding: .9rem; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -598,6 +664,10 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 900px) {
+      .popup__text {
+        -moz-column-count: 2;
+        column-count: 1; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -785,12 +855,12 @@ body {
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
   @media (max-width: 900px) {
     .navigation__background {
-      top: 3.5rem;
-      right: 3.5rem; } }
+      top: 5rem;
+      right: 4.5rem; } }
   @media (max-width: 600px) {
     .navigation__background {
-      top: 3rem;
-      right: 3rem; } }
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -924,8 +994,20 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/daylight.jpg);
   background-size: 100%;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 1200px) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/daylight.jpg);
+      background-size: cover; } }
+  @media (max-width: 900px) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/daylight.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 1200px) {
+      .book__form {
+        width: 65%; } }
+    @media (max-width: 1200px) {
+      .book__form {
+        width: 100%; } }
