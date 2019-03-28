@@ -7,16 +7,29 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 30%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 /* 
 this is a great way of globally changing sizing combined with using rem rather than pixels.
 All other px measurements are converted to rem (num/10)).
+
 The default font size is 16px which means 16px == 100% of the font size
 meaning 16/10 = .625 or 62.5% , which achieves a 10px global font size w/o
 breaking accessability tools
 */
 body {
   box-sizing: border-box; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {

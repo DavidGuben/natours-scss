@@ -7,11 +7,25 @@
 }
 
 html {
-    font-size: 62.5%; // this defines what 1rem is
+    font-size: 62.5%; // defines what 1rem is - 10px;
+    
+    @include respond(tab-port) {
+        font-size: 30%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1 rem = 12 | 12/16 = .75
+    }
+
 }
 /* 
 this is a great way of globally changing sizing combined with using rem rather than pixels.
 All other px measurements are converted to rem (num/10)).
+
 The default font size is 16px which means 16px == 100% of the font size
 meaning 16/10 = .625 or 62.5% , which achieves a 10px global font size w/o
 breaking accessability tools
@@ -19,4 +33,8 @@ breaking accessability tools
 
 body {
     box-sizing: border-box;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
