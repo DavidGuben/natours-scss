@@ -7,15 +7,15 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 56.25em) {
-    html {
-      font-size: 30%; } }
-  @media (max-width: 75em) {
-    html {
-      font-size: 56.25%; } }
-  @media (max-width: 112.5em) {
+  @media (max-width: 1800px) {
     html {
       font-size: 75%; } }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 900px) {
+    html {
+      font-size: 50%; } }
 
 /* 
 this is a great way of globally changing sizing combined with using rem rather than pixels.
@@ -26,8 +26,9 @@ meaning 16/10 = .625 or 62.5% , which achieves a 10px global font size w/o
 breaking accessability tools
 */
 body {
-  box-sizing: border-box; }
-  @media (max-width: 56.25em) {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 900px) {
     body {
       padding: 0; } }
 
@@ -75,20 +76,26 @@ body {
     animation-timing-function: ease-out;
     /*animation-delay: 3s;
         animation-iteration-count: 3;*/ }
+    @media (max-width: 600px) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.7rem;
     animation: moveInRight 1s ease-out; }
+    @media (max-width: 600px) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -101,6 +108,12 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all .2s; }
+  @media (max-width: 900px) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 600px) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -577,7 +590,12 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 600px) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -609,6 +627,13 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 900px) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 900px) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -617,6 +642,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 900px) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 900px) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc( (100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -635,6 +667,9 @@ body {
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #f7f7f7; }
+  @media (max-width: 900px) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
@@ -648,6 +683,10 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
+    @media (max-width: 900px) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -670,6 +709,10 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: right; }
+    @media (max-width: 900px) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .navigation__checkbox {
   display: none; }
@@ -686,6 +729,14 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 900px) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 600px) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -697,6 +748,14 @@ body {
   background-image: radial-gradient(#55c57a, #28b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 900px) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
+  @media (max-width: 600px) {
+    .navigation__background {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__nav {
   height: 100vh;

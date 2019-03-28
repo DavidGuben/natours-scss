@@ -8,18 +8,17 @@
 
 html {
     font-size: 62.5%; // defines what 1rem is - 10px;
-    
-    @include respond(tab-port) {
-        font-size: 30%;
+    @include respond(big-desktop) {
+        font-size: 75%;
     }
-
     @include respond(tab-land) {
         font-size: 56.25%;
     }
-
-    @include respond(big-desktop) {
-        font-size: 75%; // 1 rem = 12 | 12/16 = .75
+    @include respond(tab-port) {
+        font-size: 50%;
     }
+
+
 
 }
 /* 
@@ -33,7 +32,8 @@ breaking accessability tools
 
 body {
     box-sizing: border-box;
-
+    padding: 3rem;
+    
     @include respond(tab-port) {
         padding: 0;
     }
